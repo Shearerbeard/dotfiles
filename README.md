@@ -1,2 +1,2 @@
 # vim-conf
-Vim dotfiles
+linux dotfiles
