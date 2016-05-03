@@ -4,6 +4,10 @@ filetype plugin indent on
 
 map <F5> :NERDTreeToggle<CR>
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*

@@ -8,18 +8,21 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/require
+~MSle0~/console
 
 # Command Line History (newest to oldest):
+:q!
+:SyntasticCheck eslint
+:SystasticCheck
+:SyntasticInfo
+:syntastic
 :quit
 :Piggieback (do (require 'weasel.repl.websocket) (cemerick.piggieback/cljs-repl :repl-env (weasel.repl.websocket/repl-env)))
 :Connect
 :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 :SyntasticCheck eastwood
 :help syntastic
-:SyntasticInfo
 :Helptags
-:q!
 :Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 :echo syntastic#util#system('echo "$PATH"')
 :eastwood
@@ -58,9 +61,9 @@
 :Piggyback
 :qa
 : "tools",
-:q1
 
 # Search String History (newest to oldest):
+?/console
 ?/require
 ?/cider
 ?/setq
@@ -92,7 +95,6 @@
 ?/austin
 ?/:profiles
 ?/plugins
-?/console
 ?/profiles
 ?/middle
 ?/com.cemerick
@@ -145,43 +147,62 @@
 "0	LINE	0
 	(.log js/console "test")
 ""1	LINE	0
-	(
+	    const lifecycleEvents = model.lifecycleEvents
 "2	LINE	0
-	(require 'cider)
+		      console.log()
 "3	LINE	0
-	 app-state
-	 {:target (js/document.getElementById "app")})
+	    alt 
 "4	LINE	0
-	  :id
+	    this.state
 "5	LINE	0
-	qa@a
+		  cb
 "6	LINE	0
-	
+	gfn
 "7	LINE	0
-	   {:name "Massachusetts"  :id "MA"}
-	   {:name "Michigan"       :id "MI"}
+	=>
 "8	LINE	0
-	
+	isMutableObject 
 "9	LINE	0
-	  app-mw
-	  (fn [db _]
+	isMutableObject 
 "-	CHAR	0
 	                              
 
 # File marks:
 'Z  3  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
-'0  2  4  ~/README.md
-'1  1  0  ~/add
-'2  3  42  ~/.lein/profiles.clj
-'3  138  0  ~/.emacs.d/init.el
-'4  22  6  ~/dev/parma/NERD_tree_1
-'5  101  43  ~/Desktop/example-chestnut/project.clj
-'6  11  6  ~/Desktop/example-chestnut/NERD_tree_1
-'7  91  43  ~/Desktop/example-chestnut/project.clj
-'8  92  48  ~/Desktop/example-chestnut/project.clj
-'9  40  4  ~/dev/parma/NERD_tree_1
+'0  76  18  ~/Desktop/alt/src/store/AltStore.js
+'1  1  0  ~/.vimrc
+'2  1  0  ~/Desktop/alt/.eslintrc
+'3  26  8  ~/Desktop/alt/src/store/AltStore.js
+'4  100  13  ~/Desktop/alt/src/store/AltStore.js
+'5  1  0  ~/Desktop/alt/src/store/NERD_tree_1
+'6  4  16  ~/Desktop/alt/src/store/AltStore.js
+'7  92  4  ~/Desktop/alt/src/store/AltStore.js
+'8  18  0  ~/Desktop/alt/src/functions.js
+'9  2  0  ~/Desktop/alt/src/functions.js
 
 # Jumplist (newest first):
+-'  76  18  ~/Desktop/alt/src/store/AltStore.js
+-'  9  7  ~/Desktop/alt/src/store/AltStore.js
+-'  1  0  ~/Desktop/alt/src/store/AltStore.js
+-'  1  0  ~/.vimrc
+-'  1  0  ~/Desktop/alt/.eslintrc
+-'  26  8  ~/Desktop/alt/src/store/AltStore.js
+-'  105  22  ~/Desktop/alt/src/store/AltStore.js
+-'  100  13  ~/Desktop/alt/src/store/AltStore.js
+-'  27  0  ~/Desktop/alt/src/store/AltStore.js
+-'  101  0  ~/Desktop/alt/src/store/AltStore.js
+-'  1  0  ~/Desktop/alt/src/store/NERD_tree_1
+-'  18  0  ~/Desktop/alt/src/store/NERD_tree_1
+-'  4  16  ~/Desktop/alt/src/store/AltStore.js
+-'  92  4  ~/Desktop/alt/src/store/AltStore.js
+-'  18  0  ~/Desktop/alt/src/functions.js
+-'  1  0  ~/Desktop/alt/src/functions.js
+-'  2  0  ~/Desktop/alt/src/functions.js
+-'  3  0  ~/Desktop/alt/src/functions.js
+-'  4  0  ~/Desktop/alt/src/functions.js
+-'  64  0  ~/tern-config.json
+-'  1  0  ~/tern-config.json
+-'  2  0  ~/tern-config.json
 -'  2  4  ~/README.md
 -'  1  0  ~/README.md
 -'  1  0  ~/add
@@ -225,7 +246,6 @@
 -'  120  4  ~/dev/parma/NERD_tree_1
 -'  1  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
 -'  14  0  ~/.vimrc
--'  1  0  ~/.vimrc
 -'  135  6  ~/dev/parma/NERD_tree_1
 -'  129  6  ~/dev/parma/NERD_tree_1
 -'  147  2  ~/dev/parma/NERD_tree_1
@@ -260,30 +280,60 @@
 -'  443  6  ~/dev/parma/NERD_tree_1
 -'  439  6  ~/dev/parma/NERD_tree_1
 -'  457  2  ~/dev/parma/NERD_tree_1
--'  473  6  ~/dev/parma/NERD_tree_1
--'  469  6  ~/dev/parma/NERD_tree_1
--'  487  2  ~/dev/parma/NERD_tree_1
--'  123  0  ~/dev/parma/project.clj
--'  1  0  ~/dev/parma/project.clj
--'  506  6  ~/dev/parma/NERD_tree_1
--'  499  6  ~/dev/parma/NERD_tree_1
--'  517  2  ~/dev/parma/NERD_tree_1
--'  87  59  ~/dev/parma/project.clj
--'  96  47  ~/dev/parma/project.clj
--'  77  40  ~/dev/parma/project.clj
--'  115  20  ~/dev/parma/project.clj
--'  97  35  ~/dev/parma/project.clj
--'  89  13  ~/dev/parma/project.clj
--'  29  0  ~/dev/parma/project.clj
--'  37  0  ~/dev/parma/project.clj
--'  33  45  ~/dev/parma/project.clj
--'  534  8  ~/dev/parma/NERD_tree_1
--'  530  8  ~/dev/parma/NERD_tree_1
--'  548  4  ~/dev/parma/NERD_tree_1
--'  561  6  ~/dev/parma/NERD_tree_1
--'  557  6  ~/dev/parma/NERD_tree_1
 
 # History of marks within files (newest to oldest):
+
+> ~/Desktop/alt/src/store/AltStore.js
+	"	76	18
+	.	9	0
+	+	103	1
+	+	103	1
+	+	104	0
+	+	104	0
+	+	90	0
+	+	4	16
+	+	4	17
+	+	12	0
+	+	12	0
+	+	102	0
+	+	26	0
+	+	26	0
+	+	6	0
+	+	9	0
+
+> ~/.vimrc
+	"	1	0
+	^	14	31
+	.	14	30
+	+	1	0
+	+	2	8
+	+	3	24
+	+	4	0
+	+	5	27
+	+	14	30
+
+> ~/Desktop/alt/.eslintrc
+	"	1	0
+
+> ~/Desktop/alt/src/store/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Desktop/alt/src/functions.js
+	"	18	0
+	^	18	0
+	.	19	0
+	+	18	0
+	+	18	0
+	+	18	0
+	+	19	0
+
+> ~/tern-config.json
+	"	64	0
+	^	1	1
+	.	85	0
+	+	85	0
 
 > ~/README.md
 	"	2	4
@@ -479,17 +529,6 @@
 	+	60	0
 	+	56	0
 	+	56	0
-
-> ~/.vimrc
-	"	14	0
-	^	14	31
-	.	14	30
-	+	1	0
-	+	2	8
-	+	3	24
-	+	4	0
-	+	5	27
-	+	14	30
 
 > ~/dev/parma/src/cljs/parma_membership/views/pages.cljs
 	"	1	0
