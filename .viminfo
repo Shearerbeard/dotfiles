@@ -8,9 +8,39 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/console
+~MSle0~/dev
 
 # Command Line History (newest to oldest):
+:w
+:repl-options
+:tabnext
+:h tabs
+:gt
+:help colorscheme
+:colorscheme help
+:colorshemes help
+:help colorschemes
+:help fireplace
+:fireplace help
+:FireplaceStatus
+:RainbowToggle
+:Piggieback
+:Connect
+:colorscheme znake
+:colorscheme zephyr
+:colorsheme zwphyr
+:colorscheme molokai
+:colorscheme wombat
+:colorscheme zenburn
+:colorscheme khaki
+:colorscheme kate
+:colorscheme kyle
+:Piggieback!
+:echo fireplace#client()
+:Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
+:Require!
+:Piggieback NullPointerException   cemerick.piggieback/generate-delegating-repl-env (piggieb
+:Piggieback (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 :q!
 :SyntasticCheck eslint
 :SystasticCheck
@@ -18,12 +48,10 @@
 :syntastic
 :quit
 :Piggieback (do (require 'weasel.repl.websocket) (cemerick.piggieback/cljs-repl :repl-env (weasel.repl.websocket/repl-env)))
-:Connect
 :Piggieback (weasel.repl.websocket/repl-env :ip "0.0.0.0" :port 9001)
 :SyntasticCheck eastwood
 :help syntastic
 :Helptags
-:Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 :echo syntastic#util#system('echo "$PATH"')
 :eastwood
 ::Piggieback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
@@ -31,61 +59,52 @@
 :Piggieback 9000
 :cljs
 :Piggieback! localhost:9000
-:Piggieback!
 :Piggieback (do (require 'figwheel-sidecar.repl-api)(figwheel-sidecar.repl-api/cljs-repl))
-:Piggieback (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 :Piggieback (cljs-repl)
-:(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
-:h
-:Piggieback! (cemerick.austin/exec-env)
-:echo fireplace#client()
-:Piggyback! (do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
-:'<,'>Doc
-:'<,'>Do
-:Doc
-:Piggieback! (do (require 'figwheel-sidecard.repl-api) (figwheel-sidecard.repl-api/cljs-repl))
-:Connect nrepl://localhost:7888
-:Connect nrepl://localhost:7002
-:Piggieback :7002
-:Require!
-:Piggieback (cemerick.piggieback/cljs-repl :repl-env (cemerick.austin/exec-env))
-:Piggieback (merick
-:Reload!
-:Piggieback 7002
-:C<F5><F5><F5>
-:colorscheme default
-:colorscheme molokai
-:colorscheme wombat
-:colorsheme wombat
-:Piggieback
-:Piggyback
-:qa
-: "tools",
 
 # Search String History (newest to oldest):
+?/dev
+?/cljs
+?/src
+?/devtools
+?/repl
+?/init
+?/project
+?/repl-options
+?/projec
+?/core
+?/next
+?/next-uuid
+?/user
+?/new-user
+?/cons
+?/db
+?/con
+?/r-mdl
+?/detail
+?/views
+?/const
+?/cls
+?/cor
+?/3
+?/co
+?/nrepl
+?/hand
+?/1
+?/8
+?/Reload!
 ?/console
 ?/require
 ?/cider
 ?/setq
-?/hand
-?/cljs
-?/src
 ?/piggie
-?/core
 ?/piggi
-?/nrepl
 ?/set
 ?/add
 ?/wrap
-?/dev
 ?/env
 ?/ring
-?/db
-?/con
-?/cons
-?/const
 ?/page
-?/views
 ?/figwheel
 ?/sidecar
 ?/:dev
@@ -94,25 +113,6 @@
 ?/source-paths
 ?/austin
 ?/:profiles
-?/plugins
-?/profiles
-?/middle
-?/com.cemerick
-?/pro
-?/n-repl
-?/auth
-?/view
-?/cemerick
-?/repl-options
-?/proj
-?/port
-?/piggy
-?/project
-?/repl
-?/7888
-?/sr
-?/JDK
-?/JVM
 
 # Expression History (newest to oldest):
 
@@ -120,8 +120,10 @@
 @~/dev/parma
 @7002
 @localhost
-@~/Desktop/example-chestnut
+@~/dev/parma/target/classes/parma_membership/views/people_detail.cljs
+@~/Desktop/test-prj
 @7888
+@~/Desktop/example-chestnut
 @~/dev/parma/env/dev/clj/parma_membership/repl.clj
 @~/dev/parmaZ
 @~/dev/parma\
@@ -137,54 +139,129 @@
 @(which-ns?)
 @states
 @(weasel.repl)
-@states
-@(weasel.repl)
-@states
+@(do (require 'figwheel-sidecar.repl-api) (figwheel-sidecar.repl-api/cljs-repl))
 
 # Input Line History (newest to oldest):
 
 # Registers:
 "0	LINE	0
-	(.log js/console "test")
-""1	LINE	0
-	    const lifecycleEvents = model.lifecycleEvents
-"2	LINE	0
-		      console.log()
+	            ;[clojure.browser.repl :as repl]
+"1	CHAR	0
+	(do (require 'dirac.agent)
+	    (dirac.agent/boot!))
+	
+"2	CHAR	0
+	:port 8230
+	                                  :nrepl-middleware [dirac.nrepl.middleware]
 "3	LINE	0
-	    alt 
+	            ;[clojure.browser.repl :as repl]
 "4	LINE	0
-	    this.state
+	     (include-js "/js/out/parma_membership/devtools.js")
 "5	LINE	0
-		  cb
-"6	LINE	0
-	gfn
+	
+"6	CHAR	0
+	EnableSyntaxExtension
+	
 "7	LINE	0
-	=>
+	states 
 "8	LINE	0
-	isMutableObject 
+	    const lifecycleEvents = model.lifecycleEvents
 "9	LINE	0
-	isMutableObject 
-"-	CHAR	0
-	                              
+		      console.log()
+""-	CHAR	0
+	syntastic_triggers 
 
 # File marks:
 'Z  3  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
-'0  76  18  ~/Desktop/alt/src/store/AltStore.js
-'1  1  0  ~/.vimrc
-'2  1  0  ~/Desktop/alt/.eslintrc
-'3  26  8  ~/Desktop/alt/src/store/AltStore.js
-'4  100  13  ~/Desktop/alt/src/store/AltStore.js
-'5  1  0  ~/Desktop/alt/src/store/NERD_tree_1
-'6  4  16  ~/Desktop/alt/src/store/AltStore.js
-'7  92  4  ~/Desktop/alt/src/store/AltStore.js
-'8  18  0  ~/Desktop/alt/src/functions.js
-'9  2  0  ~/Desktop/alt/src/functions.js
+'0  1  0  ~/.vimrc
+'1  22  0  ~/.vimrc
+'2  22  6  ~/dev/parma/NERD_tree_1
+'3  5  0  ~/dev/parma/env/dev/clj/parma_membership/repl.clj
+'4  1  0  ~/.ssh/id_rsa.pub
+'5  4  0  ~/.lein/profiles.clj
+'6  1  0  ~/.profile
+'7  95  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+'8  27  35  ~/.vimrc
+'9  111  6  ~/dev/parma/NERD_tree_1
 
 # Jumplist (newest first):
+-'  1  0  ~/.vimrc
+-'  22  0  ~/.vimrc
+-'  2  0  ~/.vimrc
+-'  22  6  ~/dev/parma/NERD_tree_1
+-'  15  6  ~/dev/parma/NERD_tree_1
+-'  34  2  ~/dev/parma/NERD_tree_1
+-'  1  6  ~/dev/parma/NERD_tree_1
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/devtools.cljs
+-'  5  0  ~/dev/parma/env/dev/clj/parma_membership/repl.clj
+-'  72  61  ~/dev/parma/project.clj
+-'  1  0  ~/dev/parma/project.clj
+-'  39  16  ~/dev/parma/src/clj/parma_membership/handler.clj
+-'  33  5  ~/dev/parma/src/clj/parma_membership/handler.clj
+-'  1  0  ~/dev/parma/src/clj/parma_membership/handler.clj
+-'  1  0  ~/.ssh/id_rsa.pub
+-'  4  0  ~/.lein/profiles.clj
+-'  1  0  ~/.lein/profiles.clj
+-'  1  0  ~/.profile
+-'  95  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  17  19  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  10  63  ~/dev/parma/src/cljs/parma_membership/views/people_detail.cljs
+-'  145  0  ~/dev/parma/src/cljs/parma_membership/views/people_detail.cljs
+-'  16  5  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  14  5  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  84  14  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  114  11  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  142  32  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  138  10  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  95  3  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  20  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  27  35  ~/.vimrc
+-'  111  6  ~/dev/parma/NERD_tree_1
+-'  105  6  ~/dev/parma/NERD_tree_1
+-'  123  2  ~/dev/parma/NERD_tree_1
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/db.cljs
+-'  139  6  ~/dev/parma/NERD_tree_1
+-'  135  6  ~/dev/parma/NERD_tree_1
+-'  153  2  ~/dev/parma/NERD_tree_1
+-'  158  24  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  151  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  161  39  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  154  2  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  48  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  33  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  119  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+-'  57  7  ~/dev/parma/src/cljs/parma_membership/views/people_detail.cljs
+-'  37  0  ~/dev/parma/src/cljs/parma_membership/views/people_detail.cljs
+-'  65  8  ~/dev/parma/target/classes/parma_membership/views/people_detail.cljs
+-'  14  0  ~/dev/parma/target/classes/parma_membership/views/people_detail.cljs
+-'  79  0  ~/dev/parma/target/classes/parma_membership/views/people_detail.cljs
+-'  179  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  359  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  1  0  ~/dev/parma/target/cljsbuild/public/js/out/parma_membership/handlers.cljs
+-'  8  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  1  0  ~/Desktop/test-prj/src/test_prj/core.cljs
+-'  13  20  ~/Desktop/test-prj/src/test_prj/core.cljs
+-'  17  0  ~/Desktop/test-prj/src/test_prj/core.cljs
+-'  6  0  ~/Desktop/test-prj/src/test_prj/core.cljs
+-'  57  0  ~/Desktop/test-prj/project.clj
+-'  23  0  ~/Desktop/test-prj/project.clj
+-'  1  0  ~/Desktop/test-prj/project.clj
+-'  3  19  ~/.lein/profiles.clj
+-'  7  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  127  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+-'  6  17  ~/dev/parma/src/cljs/parma_membership/constants.cljs
+-'  321  6  ~/dev/parma/NERD_tree_1
+-'  317  6  ~/dev/parma/NERD_tree_1
+-'  335  2  ~/dev/parma/NERD_tree_1
+-'  50  0  ~/dev/parma/src/cljs/parma_membership/db.cljs
+-'  63  42  ~/dev/parma/src/cljs/parma_membership/db.cljs
+-'  60  0  ~/dev/parma/src/cljs/parma_membership/db.cljs
 -'  76  18  ~/Desktop/alt/src/store/AltStore.js
 -'  9  7  ~/Desktop/alt/src/store/AltStore.js
 -'  1  0  ~/Desktop/alt/src/store/AltStore.js
--'  1  0  ~/.vimrc
 -'  1  0  ~/Desktop/alt/.eslintrc
 -'  26  8  ~/Desktop/alt/src/store/AltStore.js
 -'  105  22  ~/Desktop/alt/src/store/AltStore.js
@@ -198,178 +275,59 @@
 -'  18  0  ~/Desktop/alt/src/functions.js
 -'  1  0  ~/Desktop/alt/src/functions.js
 -'  2  0  ~/Desktop/alt/src/functions.js
--'  3  0  ~/Desktop/alt/src/functions.js
--'  4  0  ~/Desktop/alt/src/functions.js
--'  64  0  ~/tern-config.json
--'  1  0  ~/tern-config.json
--'  2  0  ~/tern-config.json
--'  2  4  ~/README.md
--'  1  0  ~/README.md
--'  1  0  ~/add
--'  3  42  ~/.lein/profiles.clj
--'  1  0  ~/.lein/profiles.clj
--'  138  0  ~/.emacs.d/init.el
--'  93  4  ~/.emacs.d/init.el
--'  6  1  ~/.emacs.d/init.el
--'  1  0  ~/.emacs.d/init.el
--'  46  40  ~/.emacs.d/init.el
--'  47  4  ~/.emacs.d/init.el
--'  132  19  ~/.emacs.d/init.el
--'  14  4  ~/.emacs.d/init.el
--'  44  0  ~/.emacs.d/init.el
+-'  5  0  ~/dev/parma/env/dev/clj/parma_membership/repl.clj
+-'  72  61  ~/dev/parma/project.clj
 -'  22  6  ~/dev/parma/NERD_tree_1
 -'  15  6  ~/dev/parma/NERD_tree_1
--'  33  2  ~/dev/parma/NERD_tree_1
+-'  34  2  ~/dev/parma/NERD_tree_1
 -'  1  6  ~/dev/parma/NERD_tree_1
--'  1  0  ~/dev/parma/src/cljs/parma_membership/handlers.cljs
--'  101  43  ~/Desktop/example-chestnut/project.clj
--'  91  43  ~/Desktop/example-chestnut/project.clj
--'  96  0  ~/Desktop/example-chestnut/project.clj
--'  97  0  ~/Desktop/example-chestnut/project.clj
--'  1  0  ~/Desktop/example-chestnut/project.clj
--'  11  6  ~/Desktop/example-chestnut/NERD_tree_1
--'  10  6  ~/Desktop/example-chestnut/NERD_tree_1
--'  19  2  ~/Desktop/example-chestnut/NERD_tree_1
--'  1  6  ~/Desktop/example-chestnut/NERD_tree_1
--'  1  0  ~/Desktop/example-chestnut/src/cljs/example_chestnut/core.cljs
--'  13  0  ~/Desktop/example-chestnut/project.clj
--'  92  48  ~/Desktop/example-chestnut/project.clj
--'  73  14  ~/Desktop/example-chestnut/project.clj
--'  40  4  ~/dev/parma/NERD_tree_1
--'  56  2  ~/dev/parma/NERD_tree_1
--'  1  0  ~/dev/parma/env/dev/clj/parma_membership/repl.clj
--'  62  5  ~/dev/parma/NERD_tree_1
--'  93  2  ~/dev/parma/NERD_tree_1
--'  1  0  ~/dev/parma/src/cljs/parma_membership/db.cljs
--'  106  8  ~/dev/parma/NERD_tree_1
--'  102  8  ~/dev/parma/NERD_tree_1
--'  120  4  ~/dev/parma/NERD_tree_1
--'  1  0  ~/dev/parma/src/cljs/parma_membership/constants.cljs
--'  14  0  ~/.vimrc
--'  135  6  ~/dev/parma/NERD_tree_1
--'  129  6  ~/dev/parma/NERD_tree_1
--'  147  2  ~/dev/parma/NERD_tree_1
--'  163  6  ~/dev/parma/NERD_tree_1
--'  159  6  ~/dev/parma/NERD_tree_1
--'  177  2  ~/dev/parma/NERD_tree_1
--'  193  6  ~/dev/parma/NERD_tree_1
--'  189  6  ~/dev/parma/NERD_tree_1
--'  207  2  ~/dev/parma/NERD_tree_1
--'  226  6  ~/dev/parma/NERD_tree_1
--'  219  6  ~/dev/parma/NERD_tree_1
--'  237  2  ~/dev/parma/NERD_tree_1
--'  254  6  ~/dev/parma/NERD_tree_1
--'  247  6  ~/dev/parma/NERD_tree_1
--'  265  2  ~/dev/parma/NERD_tree_1
--'  286  8  ~/dev/parma/NERD_tree_1
--'  280  8  ~/dev/parma/NERD_tree_1
--'  305  2  ~/dev/parma/NERD_tree_1
--'  1  0  ~/dev/parma/src/cljs/parma_membership/views/pages.cljs
--'  322  6  ~/dev/parma/NERD_tree_1
--'  316  6  ~/dev/parma/NERD_tree_1
--'  334  2  ~/dev/parma/NERD_tree_1
--'  352  10  ~/dev/parma/NERD_tree_1
--'  346  10  ~/dev/parma/NERD_tree_1
--'  371  4  ~/dev/parma/NERD_tree_1
--'  383  6  ~/dev/parma/NERD_tree_1
--'  379  6  ~/dev/parma/NERD_tree_1
--'  397  2  ~/dev/parma/NERD_tree_1
--'  416  6  ~/dev/parma/NERD_tree_1
--'  409  6  ~/dev/parma/NERD_tree_1
--'  427  2  ~/dev/parma/NERD_tree_1
--'  443  6  ~/dev/parma/NERD_tree_1
--'  439  6  ~/dev/parma/NERD_tree_1
--'  457  2  ~/dev/parma/NERD_tree_1
+-'  1  0  ~/dev/parma/src/cljs/parma_membership/devtools.cljs
+-'  5  0  ~/dev/parma/env/dev/clj/parma_membership/repl.clj
 
 # History of marks within files (newest to oldest):
 
-> ~/Desktop/alt/src/store/AltStore.js
-	"	76	18
-	.	9	0
-	+	103	1
-	+	103	1
-	+	104	0
-	+	104	0
-	+	90	0
-	+	4	16
-	+	4	17
-	+	12	0
-	+	12	0
-	+	102	0
-	+	26	0
-	+	26	0
-	+	6	0
-	+	9	0
-
 > ~/.vimrc
 	"	1	0
-	^	14	31
-	.	14	30
+	^	21	37
+	.	21	36
 	+	1	0
-	+	2	8
-	+	3	24
-	+	4	0
+	+	1	34
+	+	1	60
+	+	1	62
 	+	5	27
-	+	14	30
-
-> ~/Desktop/alt/.eslintrc
-	"	1	0
-
-> ~/Desktop/alt/src/store/NERD_tree_1
-	"	1	0
-	.	1	0
+	+	16	30
+	+	30	43
+	+	30	42
+	+	30	49
+	+	30	50
+	+	30	50
+	+	30	0
+	+	29	43
+	+	29	44
+	+	29	23
+	+	30	0
+	+	29	35
+	+	1	35
+	+	1	61
 	+	1	0
+	+	27	23
+	+	29	35
+	+	7	21
+	+	23	32
+	+	24	17
+	+	25	2
+	+	25	3
+	+	23	27
+	+	20	0
+	+	21	36
 
-> ~/Desktop/alt/src/functions.js
-	"	18	0
-	^	18	0
-	.	19	0
-	+	18	0
-	+	18	0
-	+	18	0
-	+	19	0
-
-> ~/tern-config.json
-	"	64	0
-	^	1	1
-	.	85	0
-	+	85	0
-
-> ~/README.md
-	"	2	4
-	^	2	5
-	.	2	4
-	+	2	4
-
-> ~/add
-	"	1	0
-
-> ~/.lein/profiles.clj
-	"	3	42
-	^	3	43
-	.	3	42
-	+	1	43
-	+	1	43
-	+	3	44
-	+	2	50
-	+	3	42
-
-> ~/.emacs.d/init.el
-	"	138	0
-	^	138	56
-	.	138	55
-	+	139	0
-	+	138	55
-
-> ~/dev/parma/src/cljs/parma_membership/handlers.cljs
-	"	3	13
-	^	81	3
-	.	46	0
-	+	19	0
-	+	112	17
-	+	112	0
-	+	82	0
-	+	46	0
+> ~/dev/parma/src/cljs/parma_membership/devtools.cljs
+	"	5	23
+	^	5	24
+	.	5	23
+	+	8	28
+	+	3	25
+	+	5	23
 
 > ~/dev/parma/NERD_tree_1
 	"	22	6
@@ -475,6 +433,354 @@
 	+	1	0
 	+	1	0
 
+> ~/dev/parma/src/clj/parma_membership/handler.clj
+	"	39	16
+	.	33	0
+	+	33	30
+	+	34	0
+	+	33	0
+
+> ~/dev/parma/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/dev/parma/NERD_tree_2
+	"	13	0
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/dev/parma/src/cljs/parma_membership/core.cljs
+	"	3	38
+	^	3	39
+	.	3	38
+	+	4	0
+	+	3	38
+
+> ~/dev/parma/project.clj
+	"	72	61
+	^	75	62
+	.	75	61
+	+	72	64
+	+	76	0
+	+	122	50
+	+	54	47
+	+	92	59
+	+	92	0
+	+	91	59
+	+	72	0
+	+	72	43
+	+	72	0
+	+	72	64
+	+	72	108
+	+	72	172
+	+	76	0
+	+	76	0
+	+	123	81
+	+	80	56
+	+	90	0
+	+	72	64
+	+	72	64
+	+	74	57
+	+	75	61
+
+> ~/dev/parma/env/dev/clj/parma_membership/repl.clj
+	"	5	0
+	^	5	0
+	.	6	0
+	+	5	23
+	+	6	0
+
+> ~/.ssh/id_rsa.pub
+	"	1	0
+	^	1	0
+
+> ~/.vim/bundle/NERD_tree_1
+	"	6	0
+	.	1	0
+	+	1	0
+
+> ~/.lein/profiles.clj
+	"	4	0
+	^	4	18
+	.	4	18
+	+	1	43
+	+	1	43
+	+	4	44
+	+	2	50
+	+	4	47
+	+	4	47
+	+	4	47
+	+	6	0
+	+	3	34
+	+	5	0
+	+	4	19
+	+	3	19
+	+	4	18
+
+> ~/.profile
+	"	1	0
+
+> ~/dev/parma/src/cljs/parma_membership/constants.cljs
+	"	95	3
+	.	96	0
+	+	31	0
+	+	1	0
+	+	3	0
+	+	2	0
+	+	61	0
+	+	61	0
+	+	61	0
+	+	57	0
+	+	57	0
+	+	9	0
+	+	6	57
+	+	7	17
+	+	96	0
+
+> ~/dev/parma/src/cljs/parma_membership/handlers.cljs
+	"	16	5
+	^	81	3
+	.	46	0
+	+	19	0
+	+	112	17
+	+	112	0
+	+	82	0
+	+	46	0
+
+> ~/dev/parma/src/cljs/parma_membership/views/people_detail.cljs
+	"	10	63
+
+> ~/dev/parma/src/cljs/parma_membership/views/components/react_mdl.cljs
+	"	95	0
+	^	6	9
+	.	6	8
+	+	18	0
+	+	3	0
+	+	6	9
+	+	6	8
+
+> ~/.vim/bundle/vim-fireplace/doc/fireplace.txt
+	"	57	48
+
+> /usr/share/vim/vim74/doc/syntax.txt
+	"	4437	8
+
+> /usr/share/vim/vim74/doc/tabpage.txt
+	"	224	7
+
+> ~/dev/parma/src/cljs/parma_membership/db.cljs
+	"	1	0
+	^	7	23
+	.	8	0
+	+	7	23
+	+	7	25
+	+	7	25
+	+	6	0
+	+	8	0
+
+> ~/dev/parma/target/classes/parma_membership/views/people_detail.cljs
+	"	65	8
+
+> ~/dev/parma/target/cljsbuild/public/js/out/parma_membership/handlers.cljs
+	"	1	0
+
+> ~/Desktop/test-prj/src/test_prj/core.cljs
+	"	1	0
+	^	6	69
+	.	7	0
+	+	6	69
+	+	6	69
+	+	7	0
+
+> ~/Desktop/test-prj/NERD_tree_1
+	"	7	4
+	.	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+
+> ~/Desktop/test-prj/project.clj
+	"	57	0
+	^	50	13
+	.	50	13
+	+	50	13
+
+> ~/Desktop/alt/src/store/AltStore.js
+	"	76	18
+	.	9	0
+	+	103	1
+	+	103	1
+	+	104	0
+	+	104	0
+	+	90	0
+	+	4	16
+	+	4	17
+	+	12	0
+	+	12	0
+	+	102	0
+	+	26	0
+	+	26	0
+	+	6	0
+	+	9	0
+
+> ~/Desktop/alt/.eslintrc
+	"	1	0
+
+> ~/Desktop/alt/src/store/NERD_tree_1
+	"	1	0
+	.	1	0
+	+	1	0
+
+> ~/Desktop/alt/src/functions.js
+	"	18	0
+	^	18	0
+	.	19	0
+	+	18	0
+	+	18	0
+	+	18	0
+	+	19	0
+
+> ~/tern-config.json
+	"	64	0
+	^	1	1
+	.	85	0
+	+	85	0
+
+> ~/README.md
+	"	2	4
+	^	2	5
+	.	2	4
+	+	2	4
+
+> ~/add
+	"	1	0
+
+> ~/.emacs.d/init.el
+	"	138	0
+	^	138	56
+	.	138	55
+	+	139	0
+	+	138	55
+
 > ~/Desktop/example-chestnut/project.clj
 	"	101	43
 	.	97	0
@@ -494,9 +800,6 @@
 	+	1	0
 	+	1	0
 
-> ~/dev/parma/env/dev/clj/parma_membership/repl.clj
-	"	11	7
-
 > ~/.vim/bundle/syntastic/doc/syntastic.txt
 	"	862	16
 
@@ -506,44 +809,8 @@
 	+	22	0
 	+	12	0
 
-> ~/dev/parma/src/cljs/parma_membership/db.cljs
-	"	7	22
-	^	7	23
-	.	8	0
-	+	7	23
-	+	7	25
-	+	7	25
-	+	6	0
-	+	8	0
-
-> ~/dev/parma/src/cljs/parma_membership/constants.cljs
-	"	55	0
-	^	56	12
-	.	56	0
-	+	30	0
-	+	1	0
-	+	3	0
-	+	2	0
-	+	60	0
-	+	60	0
-	+	60	0
-	+	56	0
-	+	56	0
-
 > ~/dev/parma/src/cljs/parma_membership/views/pages.cljs
 	"	1	0
-
-> ~/dev/parma/project.clj
-	"	123	0
-	^	87	60
-	.	87	59
-	+	72	64
-	+	73	0
-	+	118	50
-	+	54	47
-	+	88	59
-	+	88	0
-	+	87	59
 
 > /usr/share/vim/vim74/doc/help.txt
 	"	2	0
@@ -607,12 +874,6 @@
 	+	6	75
 	+	13	7
 
-> ~/dev/parma/NERD_tree_2
-	"	13	0
-	.	1	0
-	+	1	0
-	+	1	0
-
 > ~/dev/parma/src/NERD_tree_2
 	"	13	0
 	.	1	0
@@ -620,9 +881,6 @@
 
 > ~/dev/parma/src/cljs/parma_membership/views/auth.cljs
 	"	58	0
-
-> ~/dev/parma/src/clj/parma_membership/handler.clj
-	"	15	0
 
 > ~/dev/parma/src/clj/parma_membership/server.clj
 	"	9	0
@@ -711,9 +969,3 @@
 	+	77	1
 	+	76	1
 	+	77	1
-
-> ~/.ssh/id_rsa.pub
-	"	1	0
-
-> ~/.profile
-	"	25	0
