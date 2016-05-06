@@ -1,4 +1,6 @@
 execute pathogen#infect()
+set nocompatible
+set hidden
 syntax on
 filetype plugin indent on
 
@@ -25,5 +27,7 @@ let g:ycm_semantic_triggers = {
   \}
 
 let g:rainbow_active = 0
+let g:airline_theme='light'
 
-autocmd Syntax clojure RainbowToggle
+colorscheme solarized
+set background=dark
