@@ -1,17 +1,22 @@
-execute pathogen#infect()
 set nocompatible
-set hidden
+filetype off
+call pathogen#infect()
 syntax on
+set autoindent
+set smartindent
 filetype plugin indent on
 
 map <F5> :NERDTreeToggle<CR>
-map <C-T> <Plug>(CommandT)
-map <C-Right> :tabn<cr>
-map <C-Left> :tabp<cr>
+map <C-o> <Plug>(CommandT)
+nmap <F8> :TagbarToggle<CR>
 
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set backspace=2
+set noswapfile
+
+autocmd FileType json set sw=4
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -21,18 +26,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:elm_syntastic_show_warnings = 1
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-", "is not recognized!"]
 
-let g:ycm_semantic_triggers = {
-  \ 'elm' : ['.'],
-  \}
+let g:airline#extensions#tabline = 1
 
-let g:rainbow_active = 0
-let g:airline_theme='light'
-
-let g:CommandTHighlightColor='Pmenu'
-
-
-colorscheme solarized
 set background=dark
-set backspace=indent,eol,start
+colorscheme solarized
+
+command PrettyPrint execute "%!python -m json.tool"
