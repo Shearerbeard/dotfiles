@@ -5,6 +5,7 @@ syntax on
 filetype plugin indent on
 
 map <F5> :NERDTreeToggle<CR>
+map <C-T> <Plug>(CommandT)
 map <C-Right> :tabn<cr>
 map <C-Left> :tabp<cr>
 
@@ -29,5 +30,9 @@ let g:ycm_semantic_triggers = {
 let g:rainbow_active = 0
 let g:airline_theme='light'
 
+let g:CommandTHighlightColor='Pmenu'
+
+
 colorscheme solarized
 set background=dark
+set backspace=indent,eol,start
